@@ -1,7 +1,15 @@
+import "./index.css";
+import { Dashboard } from "./modules/dashboard/components/Dashboard";
+import { ProtectedRoute } from "./shared/components/ProtectedRoute";
+import { ToastNotification } from "./shared/components/toast/ToastNotification";
+
 export function App() {
   return (
-    <>
-      <h1>Finflow</h1>
-    </>
+    <div>
+      <ProtectedRoute>
+        <Dashboard />
+      </ProtectedRoute>
+      <ToastNotification />
+    </div>
   );
 }
